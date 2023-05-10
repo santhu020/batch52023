@@ -1,12 +1,1 @@
-pipeline {
-agent any
-stages {
-stage ("welcome to dvs jenkins"){
-steps{
-script {
-println "hi all welcome to jenkins automation"
-   }
-}
-}
-}
-}
+
