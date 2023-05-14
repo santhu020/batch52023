@@ -1,23 +1,12 @@
-pipeline {
-   agent { label 'master' }
-   stages {
-       stage('write') {
-           steps {
-               script {
-                   def date = new Date()
-                   def data = "Hello World\nSecond line\n" + date
-                   writeFile(file: 'zorg.txt', text: data)
-                   sh "ls -l"
+ pipeline  {    
+    agent {  
+	stages  { 
+	    stage ( "Welcome to Jenkins" )  { 
+		  steps  { 
+		     script {
+			    println "Hi All, Welcome to Jenkins automation" 
                }
            }
        }
-       stage('read') {
-           steps {
-               script {
-                   def data = readFile(file: 'zorg.txt')
-                   println(data)
-               }
-           }
-       }
-   }
-}
+   } 
+ }   
