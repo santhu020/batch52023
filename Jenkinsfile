@@ -1,12 +1,11 @@
 pipeline {
-    agent { label 'master' }
+    agent any
     stages {
-        stage('build') {
+        stage("Welcome to Jenkins") {
             steps {
-                echo "Hello World!"
-                sh "echo Hello from the shell"
-                sh "hostname"
-                sh "uptime"
+                script {
+                    println "Hi All ,welcome to Jenkins automation"
+                }
             }
         }
     }
